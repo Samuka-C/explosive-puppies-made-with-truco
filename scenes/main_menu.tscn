@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://bu6fhm45adiik"]
 
-[ext_resource type="Script" uid="uid://b7bjmohq1fmt1" path="res://scripts/game/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://ce82hsw5ni8nd" path="res://scripts/game/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Shader" uid="uid://bqr67g1leo58l" path="res://assets/lobby.gdshader" id="1_l6cm7"]
 [ext_resource type="Theme" uid="uid://2ry5tylxrkis" path="res://assets/themes/main_menu_theme.tres" id="3_8ln24"]
-[ext_resource type="Shader" uid="uid://dhrhc8a0fnc1c" path="res://assets/main_menu.gdshader" id="3_bqqt6"]
-[ext_resource type="FontFile" uid="uid://cgpcvr7hijhws" path="res://assets/font/distress.otf" id="5_rtw2f"]
+[ext_resource type="FontFile" uid="uid://dbdulm5wij8db" path="res://assets/font/BrontidevpDemoStyle2-ZV8E3.otf" id="4_wu84c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ekxnf"]
 shader = ExtResource("1_l6cm7")
@@ -17,16 +16,10 @@ shader_parameter/total_phases = 10
 shader_parameter/transition_progress = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wu84c"]
-shader = ExtResource("3_bqqt6")
-shader_parameter/interval = 0.5
-shader_parameter/timeDelay = 1.0
-shader_parameter/intensityX = 20.0
-shader_parameter/intensityY = 20.0
-shader_parameter/seed = 42.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_bqqt6"]
-font = ExtResource("5_rtw2f")
-font_size = 200
+font = ExtResource("4_wu84c")
+font_size = 100
 
 [node name="MainMenu" type="Control" unique_id=1478063679]
 layout_mode = 3
@@ -76,10 +69,13 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -514.0
-offset_bottom = 289.0
+offset_left = -1110.0
+offset_top = 37.0
+offset_right = -475.0
+offset_bottom = 230.0
 grow_horizontal = 0
-text = "UM"
+text = "EXPLOSIVE 
+PUPPIES"
 label_settings = SubResource("LabelSettings_bqqt6")
 horizontal_alignment = 1
 vertical_alignment = 1
