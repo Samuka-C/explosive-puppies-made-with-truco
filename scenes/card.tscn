@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://1vg5taxo02ti"]
 
 [ext_resource type="Script" uid="uid://bnx6e46flbg50" path="res://scripts/game/card/um_card.gd" id="1_ktuci"]
-[ext_resource type="Texture2D" uid="uid://dn272rwhlonni" path="res://assets/back.png" id="2_6u4wf"]
 [ext_resource type="LabelSettings" uid="uid://bfpi1epbumjcq" path="res://assets/new_label_settings.tres" id="2_ktuci"]
 [ext_resource type="Script" uid="uid://wbgdqqbi7dfa" path="res://addons/truco/core/ecs/component.gd" id="2_sy11y"]
 [ext_resource type="Script" uid="uid://1sevv30g3enb" path="res://addons/truco/core/card/card_data.gd" id="3_6ligt"]
+[ext_resource type="Texture2D" uid="uid://b6w2o5f4de7cv" path="res://assets/cards/bomb.png" id="4_6ligt"]
+[ext_resource type="Texture2D" uid="uid://0xrp1vb8x6k6" path="res://assets/cards/back.png" id="6_8w5pg"]
 
 [sub_resource type="Resource" id="Resource_8w5pg"]
 script = ExtResource("3_6ligt")
@@ -73,29 +74,22 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/Front" unique_id=796134892]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 230.0
+texture = ExtResource("4_6ligt")
+expand_mode = 1
+
 [node name="Title" type="Label" parent="Panel/MarginContainer/Front" unique_id=305102648]
 layout_mode = 0
-offset_top = 54.0
+offset_top = 115.0
 offset_right = 180.0
-offset_bottom = 172.0
-text = "1"
+offset_bottom = 230.0
+text = "Bomba"
 label_settings = ExtResource("2_ktuci")
 horizontal_alignment = 1
-
-[node name="Label" type="Label" parent="Panel/MarginContainer/Front" unique_id=1946280258]
-layout_mode = 0
-offset_left = -16.909088
-offset_top = 19.545452
-offset_right = 36.590214
-offset_bottom = 79.75865
-rotation = -0.7853982
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_font_sizes/font_size = 28
-text = "1"
-horizontal_alignment = 1
-vertical_alignment = 1
+vertical_alignment = 2
 
 [node name="Back" type="VBoxContainer" parent="Panel" unique_id=511886627]
 visible = false
@@ -109,9 +103,10 @@ grow_vertical = 2
 [node name="TextureRect" type="TextureRect" parent="Panel/Back" unique_id=259516395]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("2_6u4wf")
+texture = ExtResource("6_8w5pg")
 
 [node name="Control" type="Control" parent="." unique_id=1433500168]
+visible = false
 custom_minimum_size = Vector2(200, 250)
 layout_mode = 1
 anchors_preset = 15
