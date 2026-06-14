@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://1vg5taxo02ti"]
 
-[ext_resource type="Script" uid="uid://bnx6e46flbg50" path="res://scripts/game/card/um_card.gd" id="1_ktuci"]
+[ext_resource type="Script" uid="uid://bnx6e46flbg50" path="res://scripts/game/card/bomb_card.gd" id="1_ktuci"]
 [ext_resource type="LabelSettings" uid="uid://bfpi1epbumjcq" path="res://assets/new_label_settings.tres" id="2_ktuci"]
 [ext_resource type="Script" uid="uid://wbgdqqbi7dfa" path="res://addons/truco/core/ecs/component.gd" id="2_sy11y"]
 [ext_resource type="Script" uid="uid://1sevv30g3enb" path="res://addons/truco/core/card/card_data.gd" id="3_6ligt"]
