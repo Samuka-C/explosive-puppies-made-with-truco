@@ -6,7 +6,7 @@ var _play_seq: int = 0
 
 
 func init_system() -> void:
-	world.get_system(ValidationSystem).action_validated.connect(_on_action)
+	# world.get_system(ValidationSystem).action_validated.connect(_on_action)
 	replicator.batch_applied.connect(_on_batch_applied)
 
 
@@ -45,7 +45,7 @@ func _on_batch_applied(batch: Array[Dictionary], _sync_id: String) -> void:
 		if entry.type == CardComponent.resource_path:
 			_update_card_visual(entry.entity)
 			_reparent_card(entry.entity)
-		elif entry.type == UnoCardComponent.resource_path:
+		elif entry.type == BombCardComponent.resource_path:
 			_update_card_visual(entry.entity)
 
 

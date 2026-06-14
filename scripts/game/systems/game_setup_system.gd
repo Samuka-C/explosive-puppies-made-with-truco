@@ -92,23 +92,6 @@ func _on_action(_sender: int, action: String, _data: Dictionary) -> void:
 
 	# Carta inicial no descarte (zone 999)
 	var start_card_data: CardData = null
-	while true:
-		var candidate: CardData = dealer.deck.draw()
-		if not candidate:
-			break
-		var uno_candidate := candidate as UnoCardData
-		if not uno_candidate:
-			continue
-		if (
-			uno_candidate.card_value >= 0
-			and uno_candidate.card_value <= 9
-			and uno_candidate.card_color >= 0
-			and uno_candidate.card_color <= 3
-		):
-			start_card_data = candidate
-			break
-		# Carta de efeito — devolve ao deck (volta na reinicialização)
-		dealer.deck.discard(candidate)
 
 	if start_card_data:
 		var start_entity = world.create_entity()
