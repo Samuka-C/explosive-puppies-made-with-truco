@@ -80,7 +80,7 @@ func _ready() -> void:
 func _add_base_components(card: UnoCardData, color: int, value: int) -> void:
 	var card_comp := CardComponent.new()
 	card.components.append(card_comp)
-	var uno_comp := UnoCardComponent.new()
+	var uno_comp := BombCardComponent.new()
 	uno_comp.card_name = card.card_name
 	uno_comp.color = color
 	uno_comp.value = value

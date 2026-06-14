@@ -9,8 +9,8 @@ func applies_to(action: String, _data: Dictionary) -> bool:
 
 
 func validate(_sender: int, _data: Dictionary, context: Dictionary) -> Dictionary:
-	var uno_card = context.get("uno_card") as UnoCardComponent
-	var top_uno_card = context.get("top_uno_card") as UnoCardComponent
+	var uno_card = context.get("uno_card") as BombCardComponent
+	var top_uno_card = context.get("top_uno_card") as BombCardComponent
 	var stack_comp = context.get("stack_component") as DrawStackComponent
 	if not uno_card:
 		return {"valid": false, "reason": "card data missing"}

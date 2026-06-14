@@ -74,7 +74,7 @@ func _build_context(data: Dictionary) -> Dictionary:
 		world.get_component(data.get("entity", -1), CardComponent) if data.has("entity") else null,
 		"uno_card":
 		(
-			world.get_component(data.get("entity", -1), UnoCardComponent)
+			world.get_component(data.get("entity", -1), BombCardComponent)
 			if data.has("entity")
 			else null
 		),
@@ -86,7 +86,7 @@ func _build_context(data: Dictionary) -> Dictionary:
 		),
 		"top_uno_card":
 		(
-			world.get_component(_get_top_card_entity(999), UnoCardComponent)
+			world.get_component(_get_top_card_entity(999), BombCardComponent)
 			if _get_top_card_entity(999) >= 0
 			else null
 		),

@@ -102,7 +102,7 @@ func _execute(effect: Effect, source_entity: int, played_by: int) -> void:
 func _on_choice_received(_sender: int, _request_id: String, choice: Variant) -> void:
 	if _pending_wild.is_empty():
 		return
-	var uno_comp = world.get_component(_pending_wild.source_entity, UnoCardComponent)
+	var uno_comp = world.get_component(_pending_wild.source_entity, BombCardComponent)
 	if not uno_comp:
 		_pending_wild = {}
 		return
@@ -111,7 +111,7 @@ func _on_choice_received(_sender: int, _request_id: String, choice: Variant) -> 
 		[
 			{
 				"entity": _pending_wild.source_entity,
-				"type": UnoCardComponent.resource_path,
+				"type": BombCardComponent.resource_path,
 				"data": uno_comp.to_dict()
 			}
 		],
